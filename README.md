@@ -1,7 +1,6 @@
 C# Coding Guidelines
 =========
 
-
 This is a set of C# Coding Guidelines I'm putting together for myself and others in the community who would like to contribute. It will be both coding guidelines and tips / best practices for C#.
 
 Feel free to contribute!
@@ -29,7 +28,22 @@ Bad:
 int price, tax, total;
 ```
 - separate method definitions from property definitions ( 1 blank line )
+- bracket on line following statement:
 
+Good:
+``` C# 
+public int returnInt()
+{
+    // stuff
+}
+```
+
+Bad:
+``` C# 
+public int returnInt(){
+    // stuff
+}
+```
 
 ##Classes
 
