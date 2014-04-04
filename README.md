@@ -3,6 +3,9 @@ C# Coding Guidelines
 
 This is a set of C# Coding Guidelines I'm putting together for myself and others in the community who would like to contribute. It will be both coding guidelines and tips / best practices for C#.
 
+I have also added [some snippets](https://github.com/JeremyMorgan/csharp-coding-guidelines/tree/master/snippets "Code Snippets") to load into Visual Studio for time saving purposes. 
+
+
 Feel free to contribute!
 
 ##Code Layout
