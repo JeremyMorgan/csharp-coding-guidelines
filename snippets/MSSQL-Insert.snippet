@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Database Insert</Title>
+      <Author>Jeremy Morgan</Author>
+      <Description>Insert an item into a database with parameterized query</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations />
+      <Code Language="csharp" Kind="" Delimiter="$"><![CDATA[			String insertQuery = "INSERT INTO dbo.Item ([ItemId]) VALUES(@ItemId)";
+
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                try
+                {
+                    SqlCommand command = new SqlCommand(insertQuery, conn);
+                    
+                    command.Parameters.Add("@ItemId", itemId);
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    // TODO: Some kind of notification here sent to IT
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        Debug.WriteLine("Index #" + i + "\n" + "Error: " + ex.Errors[i].ToString() + "\n");
+                    }
+                }
+                conn.Close();
+            }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
