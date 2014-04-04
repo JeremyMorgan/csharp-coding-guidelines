@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Database Select</Title>
+      <Author>Jeremy Morgan</Author>
+      <Description>Common code to select from MS-SQL Database</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations />
+      <Code Language="csharp" Kind="" Delimiter="$"><![CDATA[		try
+            {
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    conn.Open();
+                    try
+                    {
+                        SqlDataReader myReader = null;
+                        SqlCommand myCommand = new SqlCommand("SELECT Name, Age from Table", conn);
+                        
+                        myReader = myCommand.ExecuteReader();
+                        while (myReader.Read())
+                        {
+                            name = myReader["Name"].ToString();
+							age = Convert.ToInt16(myReader["Age"]);
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // TODO: Some kind of notification here sent to IT
+                        for (int i = 0; i < ex.Errors.Count; i++)
+                        {
+                            Debug.WriteLine("Index #" + i + "\n" + "Error: " + ex.Errors[i].ToString() + "\n");
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SqlException ex)
+            {
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    Debug.WriteLine("Index #" + i + "\n" + "Error: " + ex.Errors[i].ToString() + "\n");
+                }
+            }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
