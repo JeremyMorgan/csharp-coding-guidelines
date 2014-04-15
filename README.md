@@ -48,6 +48,24 @@ public int returnInt(){
 }
 ```
 
+## Variables
+
+use camel case for fields and local variables:
+
+``` C#
+string myString
+```
+
+Use Pascal casing for all public member, type, and namespace names consisting of multiple words.
+
+Use camel casing for parameters:
+
+``` C#
+public void RemoveString(string ourString) 
+```
+
+
+
 ##Classes
 
 ###Use a method instead of a property
@@ -61,5 +79,6 @@ Whenever you have a property that:
 
 Use a method instead. 
 
+Use Pascal casing
 
     
