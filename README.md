@@ -58,6 +58,18 @@ string myString
 
 Use Pascal casing for all public member, type, and namespace names consisting of multiple words.
 
+(From MSDN)
+
+``` C# 
+public class SampleClass
+{
+   public Color BackColor 
+   {
+      // Code for Get and Set accessors goes here.
+   }
+}
+```
+
 Use camel casing for parameters:
 
 ``` C#
