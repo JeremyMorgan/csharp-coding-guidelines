@@ -76,7 +76,7 @@ Use camel casing for parameters:
 public void RemoveString(string ourString) 
 ```
 
-
+DO NOT use Hungarian notation or language specific naming ( IntMyInteger or ConvertToShort )
 
 ##Classes
 
