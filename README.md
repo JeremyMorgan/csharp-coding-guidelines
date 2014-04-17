@@ -80,6 +80,17 @@ DO NOT use Hungarian notation or language specific naming ( IntMyInteger or Conv
 
 ##Classes
 
+###A class or interface should have a single purpose. 
+
+A class can represent a primitive type or datastructure, abstraction or handle interaction between other classes. But don't mix any of these things. Follow the "Single Responsibility Principle" (from SOLID) 
+
+Use design patterns to communicate the intent of the class. 
+
+##Constructors
+
+Constructors should only be used to create a useful object. If you have too many paramaters in your constructor your class may have too much responsibility.
+
+
 ###Use a method instead of a property
 
 Whenever you have a property that:
@@ -92,5 +103,6 @@ Whenever you have a property that:
 Use a method instead. 
 
 Use Pascal casing
+
 
     
