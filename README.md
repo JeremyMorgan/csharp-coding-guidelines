@@ -5,7 +5,6 @@ This is a set of C# Coding Guidelines I'm putting together for myself and others
 
 I have also added [some snippets](https://github.com/JeremyMorgan/csharp-coding-guidelines/tree/master/snippets "Code Snippets") to load into Visual Studio for time saving purposes. 
 
-
 Feel free to contribute!
 
 ##Code Layout
