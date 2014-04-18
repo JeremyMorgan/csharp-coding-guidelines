@@ -104,5 +104,10 @@ Use a method instead.
 
 Use Pascal casing
 
+##Miscellaneous
+
+###Throw exceptions not values
+
+It's common for people throw a status value, such as a plain text friendly message or a boolean value to indicate success. Use the exception system to it's advantage. Catch the exception and out output it to a debug console or log it in another way. It's ok to append a friendly message or hint to what may have happened, but don't rely on this. Structured exception handling reduces debugging and repair time dramatically. 
 
     
