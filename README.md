@@ -109,4 +109,8 @@ Use Pascal casing
 
 It's common for people throw a status value, such as a plain text friendly message or a boolean value to indicate success. Use the exception system to it's advantage. Catch the exception and out output it to a debug console or log it in another way. It's ok to append a friendly message or hint to what may have happened, but don't rely on this. Structured exception handling reduces debugging and repair time dramatically. 
 
+###Return IEnumerable<T> instead of a concrete collection class
+
+You generally don't want to expose your collection to a caller. Don't return collections such as Arrays, lists, etc. Push the data into an IEnumerable, or in .Net 4.5 a read only collection like IReadOnlyCollection<T>
+
     
