@@ -8,7 +8,6 @@ I have also added [some snippets](https://github.com/JeremyMorgan/csharp-coding-
 Feel free to contribute!
 
 ##Code Layout
-
 Use Visual Studio Defaults
 - 4 character indentation
 - tabs saved as spaces
